@@ -1,5 +1,5 @@
 .venv/
 .vscode/
-build/
 *.swp
 build/
+docs/
