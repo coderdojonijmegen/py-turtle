@@ -5,6 +5,7 @@ Commando's
 ----------
 
 **Python Interpreter**
+
 Start Thonny.
 Type onderin (je hoeft de >>> niet te typen):
 
@@ -13,6 +14,7 @@ Type onderin (je hoeft de >>> niet te typen):
 Hiermee geef je Python de opdracht om de turtle te gebruiken.
 
 **Tekenen**
+
 Je turtle kan voor je tekenen door hem opdrachten te geven. Type het volgende:
 
     >>> forward(100)
@@ -25,6 +27,7 @@ De turtle kan ook achteruit:
     >>> backward(100)
 
 **Dikkere lijnen**
+
 Je kan je lijnen dikker maken met width(). Probeer deze commando's maar eens
 uit:
 
@@ -39,6 +42,7 @@ Tip: met de pijltjestoetsen op je toetsenbord kun je eerder commando's terug
 halen. Met enter kun je die dan opnieuw uitvoeren.
 
 **Draaien**
+
 Je kan je turtle laten draaien:
 
     >>> right(90)
@@ -55,6 +59,7 @@ draaien. Probeer deze commando's maar eens uit:
     >>> forward(100)
 
 **Kleur**
+
 Je turtle en de lijnen zijn nu nog zwart. Je kan de kleur van de turtle en de
 achtergrond kleur makkelijk veranderen. Probeer deze commando's eens uit en
 kijk bij elk commando wat er veranderd op je scherm:
@@ -69,6 +74,7 @@ Experimenteer vooral ook met andere kleuren! Onderin deze pagina zie je een
 overzichtje van allerlei verschillende kleuren.
 
 **Opnieuw beginnen**
+
 Je kan de tekening die de turtle heeft gemaakt verwijderen:
 
     >>> clear()
@@ -85,16 +91,19 @@ elke opdracht de reset() commando om aan de volgende te beginnen. De bgcolor()
 staat telkens ingesteld op 'black'.
 
 **Opdracht 1-A**
+
 .. image:: images/o1a.png
 
 *kleur: 'green'*
 
 **Opdracht 1-B**
+
 .. image:: images/o1b.png
 
 *kleuren: 'lightblue' en 'yellow'*
 
 **Opdracht 1-C**
+
 .. image:: images/o1c.png
 
 *kleuren: 'darkkhaki' en 'red'.*

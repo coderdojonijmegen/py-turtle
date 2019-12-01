@@ -10,13 +10,6 @@ Welcome to turtle-dojo's documentation!
    :maxdepth: 2
    :caption: Inhoud:
 
-   turtle_begin
+   turtle_intro
+   python
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
