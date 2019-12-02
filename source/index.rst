@@ -10,7 +10,11 @@ Welcome to turtle-dojo's documentation!
    :maxdepth: 2
    :caption: Inhoud:
 
+   introductie
+   benodigdheden
    turtle_intro
    python
    turtle_gevorderd
-
+   conclusie
+   vervolg
+   licentie
