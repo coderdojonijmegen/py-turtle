@@ -35,9 +35,10 @@ uit en kijk na elke stap wat er gebeurt:
     >>> clearstamp(stempel2)
 
 Elke keer dat we stempelen, met stamp(), maken we ook een variabele aan. Die
-variabelen kunnen we gebruiken om stempels die we gedrukt hebben te verwijderen,
-met clearstamp(). Daarom is het handig om ze een naam te geven zoals stempel1,
-stempel2, etc. Dan weet je later nog precies welke stempel dat is geweest.
+variabelen kunnen we gebruiken om stempels die we gedrukt hebben te
+verwijderen, met clearstamp(). Daarom is het handig om ze een naam te geven
+zoals stempel1, stempel2, etc. Dan weet je later nog precies welke stempel dat
+is geweest.
 
 
 **Turtle posities**
@@ -51,7 +52,7 @@ gaan:
     >>> setpos(0,0)
 
 Om erachter te komen wat elk getal betekent, kun je het beste 1 van de 2
-veranderen en dan zien wat er gebeurt. Het eerste getal noemen we de X-as, het 
+veranderen en dan zien wat er gebeurt. Het eerste getal noemen we de X-as, het
 tweede getal noemen we de Y-as.
 
 Soms wil je de turtle verplaatsen zonder dat er een lijn wordt getekent. Je
@@ -102,7 +103,7 @@ Je turtle tekent mooie lijnen, maar je tekeningen kunnen ook ingevuld worden:
     >>> for x in range(4):
     ...     forward(100)
     ...     right(90)
-    ... 
+    ...
     >>> end_fill()
 
 Let op dat het invullen pas gebeurt bij end_fill(). Je kan de invulkleur kiezen
@@ -119,7 +120,7 @@ geel-zwarte ster:
     >>> for x in range(18):
     ...     forward(200)
     ...     left(100)
-    ... 
+    ...
     >>> end_fill()
 
 
@@ -138,7 +139,7 @@ commando's ken je nog niet en snap je waar ze voor zijn?
     ...     right(90)
     ...     forward(40)
     ...     right(90)
-    ... 
+    ...
     >>> hideturtle()
 
 *Tip:* hideturtle() is ook een handige commando bij het stempelen. Om de turtle
@@ -148,4 +149,15 @@ weer te tonen, gebruik je showturtle().
 Opdrachten
 ----------
 
-TODO: schildpadden in een zandbak, een klok, een ruiten 3 speelkaart.
+Probeer de onderstaande tekeningen na te maken, of bedenk je eigen tekeningen.
+
+**Opdracht 3-A**
+
+*Schildpadden in een zandbak*
+
+.. image:: images/o3a.png
+
+
+**Opdracht 3-B**
+
+TODO: een klok, een ruiten 3 speelkaart.
