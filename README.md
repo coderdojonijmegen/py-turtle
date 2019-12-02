@@ -1,6 +1,6 @@
-# Instructie Python
+# Instructie Python Turtle
 
-Dit archief bevat instructies voor Python. 
+Dit archief bevat instructies voor Python Turtle. 
 
-De pagina's zijn zichtbaar via [https://coderdojonijmegen.github.io/python/](https://coderdojonijmegen.github.io/python/).
+De pagina's zijn zichtbaar via [https://coderdojonijmegen.github.io/py-turtle/](https://coderdojonijmegen.github.io/py-turtle/).
 
