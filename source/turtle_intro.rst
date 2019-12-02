@@ -20,7 +20,8 @@ Je turtle kan voor je tekenen door hem opdrachten te geven. Type het volgende:
     >>> forward(100)
 
 Met deze commando gaat je turtle 100 stapjes vooruit. Als dat nog niet gebeurt
-was, moet nu een scherm zijn geopend met de turtle een lijn.
+was, moet nu een scherm zijn geopend, waarin je de de turtle en een lijn kan
+zien.
 
 De turtle kan ook achteruit:
 
