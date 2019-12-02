@@ -12,4 +12,5 @@ Welcome to turtle-dojo's documentation!
 
    turtle_intro
    python
+   turtle_gevorderd
 
