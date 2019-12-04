@@ -21,8 +21,8 @@ zelf kiest en een waarde. Die waarde begint hier als 45 en wordt later
 ingesteld als 90.
 
 Je kan Python ook rekensommetjes laten maken en de uitkomst in een variabele
-stoppen. Om te weten wat voor waarde een variabele heeft, kun je de naam van de
-variabele intypen en op enter drukken. Probeer maar eens uit:
+stoppen. Om te weten wat voor waarde een variabele heeft, type je de naam van de
+variabele in en druk je op enter. Probeer maar eens uit:
 
     >>> getal1 = 1 + 1
     >>> getal1
@@ -61,7 +61,7 @@ vraagt, zie je dat het tellen is opgehouden voordat 4 werd bereikt:
     3
 
 Je kan teller dus ook gebruiken in je turtle opdrachten! Kun jij voorspellen
-wat er gebeurt als je onderstaande commando's in typt?
+wat er gebeurt als je onderstaande commando's intypt?
 
     >>> for teller in range(1,5):
     ...     forward(50 * teller)
@@ -77,7 +77,7 @@ Figuren tekenen
 
 Met een klein rekensommetje kun je ook een veelhoek tekenen! Om een veelhoek te
 tekenen moet je weten wat voor hoek je turtle moet maken. Gelukkig kan Python
-dat voor je berekenen: om de turtle helemaal rond te laten gaan moet het 360
+dat voor je berekenen: om de turtle helemaal rond te laten gaan moet deze 360
 graden gedraaid zijn.
 
     >>> aantal_punten = 5
@@ -86,7 +86,7 @@ graden gedraaid zijn.
     ...     forward(100)
     ...     right(hoek)
 
-Wat gebeurt er nu als je het aantal_punten een hoger getal geeft?
+Wat gebeurt er nu als je de variabele aantal_punten een hoger getal geeft?
 
 
 **Ster**
@@ -115,7 +115,7 @@ Probeer de onderstaande figuren te tekenen.
 
 .. image:: images/o2b.png
 
-*Uitdaging:* probeer zo min mogelijk commando's te gebruiken. Lukt het in 5
+*Uitdaging:* probeer zo min mogelijk commando's te gebruiken om de opdracht uit te voeren. Lukt het in 5
 regels? Vraag een mentor om tips!
 
 **Opdracht 2-C**

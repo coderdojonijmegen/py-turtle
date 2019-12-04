@@ -19,7 +19,7 @@ Je turtle kan voor je tekenen door hem opdrachten te geven. Type het volgende:
 
     >>> forward(100)
 
-Met deze commando gaat je turtle 100 stapjes vooruit. Als dat nog niet gebeurt
+Met dit commando gaat je turtle 100 stapjes vooruit. Als dat nog niet gebeurd
 was, moet nu een scherm zijn geopend, waarin je de de turtle en een lijn kan
 zien.
 
@@ -39,7 +39,7 @@ uit:
     >>> width(1)
     >>> forward(100)
 
-Tip: met de pijltjestoetsen op je toetsenbord kun je eerder commando's terug
+Tip: met de pijltjestoetsen (omhoog en omlaag) op je toetsenbord kun je eerdere commando's terug
 halen. Met enter kun je die dan opnieuw uitvoeren.
 
 **Draaien**
@@ -63,7 +63,7 @@ draaien. Probeer deze commando's maar eens uit:
 
 Je turtle en de lijnen zijn nu nog zwart. Je kan de kleur van de turtle en de
 achtergrond kleur makkelijk veranderen. Probeer deze commando's eens uit en
-kijk bij elk commando wat er veranderd op je scherm:
+kijk bij elk commando wat er verandert op je scherm:
 
     >>> color('green')
     >>> forward(100)
@@ -88,7 +88,7 @@ Je kan ook helemaal opnieuw beginnen:
 Opdrachten
 ----------
 Probeer de onderstaande plaatjes eens na te tekenen met je turtle. Gebruik na
-elke opdracht de reset() commando om aan de volgende te beginnen. De bgcolor()
+elke opdracht het reset() commando om aan de volgende te beginnen. De achtergrondkleur
 staat telkens ingesteld op 'black'.
 
 **Opdracht 1-A**

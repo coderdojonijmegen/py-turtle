@@ -6,7 +6,7 @@ Meer turtle commando's
 
 **Vormen en stempels**
 
-Je turtle lijkt tot nu toe niet echt op een schildpad, maar dat kunnen we
+Je turtle lijkt tot nu toe niet echt op een schildpad, maar dat kun je
 veranderen:
 
     >>> shape('turtle')
@@ -55,8 +55,8 @@ Om erachter te komen wat elk getal betekent, kun je het beste 1 van de 2
 veranderen en dan zien wat er gebeurt. Het eerste getal noemen we de X-as, het
 tweede getal noemen we de Y-as.
 
-Soms wil je de turtle verplaatsen zonder dat er een lijn wordt getekent. Je
-turtle kan zijn pen op tillen en neerzetten met penup() en pendown(). Om
+Soms wil je de turtle verplaatsen zonder dat er een lijn wordt getekend. Je
+turtle kan zijn pen optillen en neerzetten met penup() en pendown(). Om
 bijvoorbeeld een vork te tekenen, schrijf je dit:
 
     >>> left(90)
@@ -93,7 +93,7 @@ kan die positie ook opslaan in variabelen, zodat je ze later kan gebruiken:
 
 **Inkleuren**
 
-Je turtle tekent mooie lijnen, maar je tekeningen kunnen ook ingevuld worden:
+Je turtle tekent mooie lijnen, maar je vormen kunnen ook ingekleurd worden:
 
     >>> bgcolor('black')
     >>> color('green')
@@ -110,7 +110,7 @@ Let op dat het invullen pas gebeurt bij end_fill(). Je kan de invulkleur kiezen
 met fillcolor(). Als je geen invulkleur kiest, wordt de kleur van je pen
 gebruikt.
 
-Deze techniek wordt echt indrukwekkend als je het gebruikt om bij meer
+Deze techniek wordt echt indrukwekkend als je het gebruikt bij meer
 ingewikkelde tekeningen. Met deze code teken je bijvoorbeeld een mooie
 geel-zwarte ster:
 
@@ -128,7 +128,7 @@ geel-zwarte ster:
 
 De laatste twee technieken die we hier behandelen spreken bijna voor zich.
 Probeer de onderstaande code maar eens om een deurmat te tekenen. Welke
-commando's ken je nog niet en snap je waar ze voor zijn?
+commando's ken je nog niet? Snap je waar ze voor bedoeld zijn?
 
     >>> write('Welkom!')
     >>> penup()
@@ -142,8 +142,8 @@ commando's ken je nog niet en snap je waar ze voor zijn?
     ...
     >>> hideturtle()
 
-*Tip:* hideturtle() is ook een handige commando bij het stempelen. Om de turtle
-weer te tonen, gebruik je showturtle().
+*Tip:* hideturtle() is ook een handig commando bij het stempelen. Om de turtle
+weer te tonen gebruik je showturtle().
 
 
 Opdrachten
