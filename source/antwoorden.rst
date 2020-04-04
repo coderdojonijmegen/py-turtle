@@ -1,6 +1,6 @@
 Antwoorden
 ==================
-Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeeld-uitwerkingen:
+Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:
 
 .. code:: python
 
@@ -128,7 +128,7 @@ Deel 3
 -------------------
 **Opdracht 3-A**
 
-In dit voorbeeld-antwoord staan 2 stempels.
+In deze voorbeelduitwerking staan 2 stempels.
 Je kan er zelf nog een paar toevoegen als je wil!
 
 .. code:: python
