@@ -16,5 +16,6 @@ turtle-dojo
    python
    turtle_gevorderd
    conclusie
+   antwoorden
    vervolg
    licentie
