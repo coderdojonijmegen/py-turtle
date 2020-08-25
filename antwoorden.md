@@ -1,16 +1,23 @@
-Antwoorden
-==================
+---
+title: "Python Turtle - Antwoorden"
+date: 2020-08-24T21:41:04+02:00
+draft: false
+headercolor: "teal-background"
+---
+
 Let op: de volgende lijn ontbreekt aan de bovenkant van deze voorbeelduitwerkingen:
 
-.. code:: python
+{{< highlight python >}}
 
     from turtle import *
+    
+{{< /highlight >}}
 
-Deel 1
--------------------
-**Opdracht 1-A**
+## Deel 1
 
-.. code:: python
+### Opdracht 1-A
+
+{{< highlight python >}}
 
     bgcolor('black')
     color('green')
@@ -23,10 +30,12 @@ Deel 1
     right(90)
     forward(100)
     right(90)
-    
-**Opdracht 1-B**
 
-.. code:: python
+{{< /highlight >}}
+    
+### Opdracht 1-B
+
+{{< highlight python >}}
 
     bgcolor('black')
     color('yellow')
@@ -53,10 +62,12 @@ Deel 1
     forward(100)
     right(90)
     forward(100)
-    
-**Opdracht 1-C**
 
-.. code:: python
+{{< /highlight >}}
+    
+### Opdracht 1-C
+
+{{< highlight python >}}
 
     bgcolor('black')
     color('darkkhaki')
@@ -79,15 +90,17 @@ Deel 1
     color('darkkhaki')
     right(45)
     forward(100)
+
+{{< /highlight >}}
     
-Deel 2
--------------------
-**Opdracht 2-A**
+## Deel 2
+
+### Opdracht 2-A
 
 Tip: 12 x 150 = 1800, en 1800 / 360 = 5. 
 Omdat 1800 deelbaar is door 360, komen de hoeken precies goed uit voor een ster.
 
-.. code:: python
+{{< highlight python >}}
 
     bgcolor('black')
     color('lightblue')
@@ -96,10 +109,12 @@ Omdat 1800 deelbaar is door 360, komen de hoeken precies goed uit voor een ster.
     for i in range(12):
         forward(100)
         right(150)
-        
-**Opdracht 2-B**
 
-.. code:: python
+{{< /highlight >}}
+        
+### Opdracht 2-B
+
+{{< highlight python >}}
 
     bgcolor('black')
     color('lightblue')
@@ -109,13 +124,15 @@ Omdat 1800 deelbaar is door 360, komen de hoeken precies goed uit voor een ster.
             forward(100)
             right(120)
         right(90)
+
+{{< /highlight >}}
         
-**Opdracht 2-C**
+### Opdracht 2-C
 
 Tip: In plaats van 360 en 1 kan je ook andere getallen kiezen.
 Zorg dat deze keer elkaar 360 zijn.
 
-.. code:: python
+{{< highlight python >}}
 
     bgcolor('black')
     color('lightblue')
@@ -123,15 +140,17 @@ Zorg dat deze keer elkaar 360 zijn.
     for i in range(360):
         forward(2)
         right(1)
+
+{{< /highlight >}}
         
-Deel 3
--------------------
-**Opdracht 3-A**
+## Deel 3
+
+### Opdracht 3-A
 
 In deze voorbeelduitwerking staan 2 stempels.
 Je kan er zelf nog een paar toevoegen als je wil!
 
-.. code:: python
+{{< highlight python >}}
 
     bgcolor('black')
     color('yellow')
@@ -156,3 +175,5 @@ Je kan er zelf nog een paar toevoegen als je wil!
     shape('turtle')
     color('blue')
     stempel2 = stamp()
+    
+{{< /highlight >}}
