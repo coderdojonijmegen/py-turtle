@@ -588,3 +588,5 @@ Je kan er zelf nog een paar toevoegen als je wil!
     
 {{< /highlight >}}
 {{< /voorbeeld >}}
+
+{{< licentie rel="http://creativecommons.org/licenses/by-nc-sa/4.0/">}}
