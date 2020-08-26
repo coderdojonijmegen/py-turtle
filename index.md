@@ -1,7 +1,8 @@
 ---
-title: "Python Turtle"
+title: "Python - Turtle"
 date: 2020-08-24T21:21:01+02:00
 draft: false
+toc: true
 headercolor: "teal-background"
 ---
 
