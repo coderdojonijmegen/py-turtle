@@ -256,6 +256,34 @@ niet te groot wordt!
 
 ## Meer turtle commando's
 
+### Veelhoeken functie
+
+Tot nu toe tekenen we veelhoeken door herhaaldelijk vooruit te lopen en een stukje te draaien. 
+Omdat veelhoeken vaak van pas komen, is hier echter ook een aparte functie voor: 
+
+    >>> circle(50, 360, 4)
+
+In dit geval tekenen we een veelhoek met een afstand van 50 tussen de omtrek en het middelpunt; 
+dit noemen we de radius. 
+Met 360 geven we aan dat we de volledige vorm willen tekenen. 
+Voor een halve veelhoek gebruiken we hier bijvoorbeeld 180. 
+Het laatste getal, 4, geeft aan dat we vier keer willen draaien en vooruit lopen. 
+Hiermee maken we dus een ruit!
+
+Als je wil kan je de volgende code proberen. 
+Deze tekent tien veelhoeken naast elkaar: van een eenhoek (monogoon) tot een tienhoek (decagoon).
+
+    >>> for i in range(10):
+    >>>     radius = 50
+    >>>     aantal_punten = i + 1
+    >>>     locatie_x = -500 + i * 100
+    >>> 
+    >>>     penup()
+    >>>     setpos(locatie_x, -radius)
+    >>>     pendown()
+    >>> 
+    >>>     circle(radius, 360, aantal_punten)
+
 ### Vormen en stempels
 
 Je turtle lijkt tot nu toe niet echt op een schildpad, maar dat kun je
@@ -342,6 +370,19 @@ kan die positie ook opslaan in variabelen, zodat je ze later kan gebruiken:
     >>> setpos(x, 0)
     >>> setpos(0, 0)
 
+### Turtle draaien
+
+Zoals je de turtle naar een bepaalde plek kan laten gaan, 
+kan je deze ook naar een bepaalde hoek laten draaien:
+
+    >>> setheading(0)    # rechts
+    >>> setheading(90)   # boven
+    >>> setheading(180)  # links
+    >>> setheading(270)  # onder
+    >>> 
+    >>> setheading(135)  # ???
+
+De turtle draait dus naar een bepaalde hoek, zonder dat het uitmaakt waar hij daarvoor naartoe kijkt.
 
 ### Inkleuren
 
@@ -411,7 +452,38 @@ Probeer de onderstaande tekeningen na te maken, of bedenk je eigen tekeningen.
 
 ### Opdracht 3-B
 
-TODO: een klok, een ruiten 3 speelkaart.
+*Een analoge klok.*
+
+![analoge klok](images/o3b.png)
+
+Challenge: als je de wijzers een bepaalde stand in wil laten nemen, 
+kan je hiervoor de volgende functies gebruiken: 
+
+{{< highlight python >}}
+
+def uren_naar_hoek(uren):
+    """Geeft de hoek voor de wijzer die "uren" aan moet geven. """
+    return - (uren / 12.0) * 360 + 90
+
+
+def minuten_naar_hoek(minuten):
+    """Geeft de hoek voor de wijzer die "minuten" aan moet geven. """
+    return - (minuten / 60.0) * 360 + 90
+    
+{{< /highlight >}}
+
+De hoek kan je vervolgens aan setheading() geven.
+
+### Opdracht 3-C
+
+*Een ruiten drie speelkaart. <sup>Maar: er klopt iets niet helemaal!</sup>*
+
+![ruiten drie](images/o3c.png)
+
+De kaart bevat twee vormen die meerdere keren herhaald worden: de ruit en het getal drie. 
+Als je bekend bent met functies, kan het handig zijn om deze hier te gebruiken. 
+Daarnaast kan je natuurlijk ook een ruiten een kaart maken, 
+als je de circle() functie nog lastig vindt.
 
 ## Antwoorden
 
@@ -589,6 +661,266 @@ Je kan er zelf nog een paar toevoegen als je wil!
     stempel2 = stamp()
     
 {{< /highlight >}}
+
+<h3>Opdracht 3-B</h3>
+
+{{< highlight python >}}
+
+def uren_naar_hoek(uren):
+    """Geeft de hoek voor de wijzer die "uren" aan moet geven. """
+    return - (uren / 12.0) * 360 + 90
+
+
+def minuten_naar_hoek(minuten):
+    """Geeft de hoek voor de wijzer die "minuten" aan moet geven. """
+    return - (minuten / 60.0) * 360 + 90
+
+
+# De radius van de circel voor de klok.
+radius = 100
+
+# Voer hier de beoogde tijd in. Je kan de hoeken natuurlijk ook op gevoel kiezen! 
+minuten = 45  # 45 / 60
+uren    = 12  # 12 / 12
+
+# Maak de omgeving in orde.
+speed('fastest')
+bgcolor('white')
+color('black')
+penup()
+
+# Start met het tekenen van een circel en een twaalfhoek.
+width(5)
+setpos(0, -radius)
+pendown()
+circle(radius, 360, 360)
+circle(radius, 360, 12)
+penup()
+
+# Vervolgens tekenen we de kleine wijzer, op basis van "uren".
+setpos(0, 0)
+setheading(minuten_naar_hoek(minuten))
+pendown()
+forward(.8 * radius)
+stempel0 = stamp()
+penup()
+
+# De grote wijzer tekenen we op een soortgelijke manier.
+setpos(0, 0)
+setheading(uren_naar_hoek(uren))
+pendown()
+forward(.5 * radius)
+stempel1 = stamp()
+penup()
+
+# Challenges:
+# - voeg een secondewijzer toe;
+# - voeg (enkele) getallen toe;
+# - voeg streepjes voor uren aan de buitenrand toe.
+
+done()
+    
+{{< /highlight >}}
+
+
+<h3>Opdracht 3-C</h3>
+
+{{< highlight python >}}
+
+speed('fastest')
+
+
+def teken_ruit(midden_x, midden_y, radius):
+    """Teken een ruit met radius: radius. """
+    penup()
+    setpos(midden_x, midden_y-radius)
+    setheading(0)
+
+    pendown()
+    begin_fill()
+    circle(radius, 360, 4)
+    end_fill()
+    penup()
+
+
+def teken_drie(midden_x, midden_y, radius):
+    """
+    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+    Van belang: circle draait linksom.
+    """
+    penup()
+    setpos(midden_x, midden_y)
+    setheading(0)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+    setpos(midden_x-radius, midden_y-radius)
+    setheading(270)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+
+# De hoogte en breedte van de kaart.
+hoogte = 400
+breedte = 250
+
+# De radius van de ruiten op de kaart.
+ruit_radius_groot = 40
+ruit_radius_klein = 10
+
+# De radius van de circels van de drie op de kaart.
+drie_radius = 10
+
+# Teken de omtrek van de kaart.
+penup()
+setpos(-.5 * breedte, .5 * hoogte)
+pendown()
+for i in range(2):
+    forward(breedte)
+    right(90)
+    forward(hoogte)
+    right(90)
+
+# Vanaf hier kleuren we alles rood.
+color('red')
+fillcolor('red')
+
+# De ruit in het midden:
+teken_ruit(0, 0, ruit_radius_groot)
+# De ruit aan de bovenkant, op een afstand van 20 van de ruit in het midden:
+teken_ruit(0,  2 * ruit_radius_groot + 20, ruit_radius_groot)
+# De ruit aan de onderkant, op een afstand van 20 van de ruit in het midden:
+teken_ruit(0, -2 * ruit_radius_groot - 20, ruit_radius_groot)
+
+# Het getal drie in de hoek linksboven.
+# De afstanden tot de omtrek kan je eventueel nog op 'drie_radius' afstemmen.
+width(5)
+teken_drie(-.5 * breedte + 15,  .5 * hoogte - 25, drie_radius)
+teken_drie( .5 * breedte - 15, -.5 * hoogte + 25, drie_radius)
+
+# Extra: de kleine ruiten onder- en boven de getallen:
+teken_ruit(-.5 * breedte + 15,  .5 * hoogte - 65, ruit_radius_klein)
+teken_ruit( .5 * breedte - 15, -.5 * hoogte + 65, ruit_radius_klein)
+
+setpos(0, 0)
+
+done()
+    
+{{< /highlight >}}
+
+<h3>Extra: getallen 0, 1, 2, 3, 4 tekenen.</h3>
+
+{{< highlight python >}}
+
+speed('fastest')
+
+
+def teken_nul(midden_x, midden_y, radius):
+    """
+    Teken een nul met hoogte: 2 * diameter, breedte: diameter.
+    """
+    penup()
+    setpos(midden_x + radius, midden_y + radius)
+    setheading(90)
+
+    pendown()
+    circle(radius, 180)
+    forward(2 * radius)
+    circle(radius, 180)
+    forward(2 * radius)
+    penup()
+
+
+def teken_een(midden_x, midden_y, lengte):
+    """
+    Teken een (simpele) een met hoogte: lengte, breedte: width.
+    """
+    penup()
+    setpos(midden_x, midden_y + .5 * lengte)
+    setheading(270)
+
+    pendown()
+    forward(lengte)
+    penup()
+
+
+def teken_twee(midden_x, midden_y, radius):
+    """
+    Teken een tween met hoogte: 2 * diameter, breedte: diameter.
+    """
+    penup()
+    setpos(midden_x + radius, midden_y + radius)
+    setheading(90)
+
+    pendown()
+    circle(radius, 180)
+    penup()
+
+    setpos(midden_x + radius, midden_y + radius)
+
+    pendown()
+    setpos(midden_x - radius, midden_y - 2 * radius)
+    setheading(0)
+    forward(2 * radius)
+    penup()
+
+
+def teken_drie(midden_x, midden_y, radius):
+    """
+    Teken een drie met hoogte: 2 * diameter, breedte: diameter.
+    Van belang: circle draait linksom.
+    """
+    penup()
+    setpos(midden_x, midden_y)
+    setheading(0)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+    setpos(midden_x-radius, midden_y-radius)
+    setheading(270)
+
+    pendown()
+    circle(radius, 270)
+    penup()
+
+
+def teken_vier(midden_x, midden_y, hoogte):
+    """
+    Teken een vier met hoogte: 2 * diameter, breedte: diameter
+    """
+    breedte = .5 * hoogte
+    penup()
+    setpos(midden_x + .25 * breedte, midden_y - .5 * hoogte)
+
+    pendown()
+    setpos(midden_x + .25 * breedte, midden_y + .5 * hoogte)
+    setpos(midden_x -  .5 * breedte, midden_y)
+    setpos(midden_x +  .5 * breedte, midden_y)
+    penup()
+
+
+# Stel vast hoe groot de getallen moeten worden.
+radius = 50
+getal_hoogte = 4 * radius
+getal_breedte = 2 * radius
+
+teken_nul(-200, 0, radius)
+teken_een(-100, 0, getal_hoogte)
+teken_twee(0, 0, radius)
+teken_drie(100, 0, radius)
+teken_vier(200, 0, getal_hoogte)
+
+
+done()
+    
+{{< /highlight >}}
+
 {{< /voorbeeld >}}
 
 {{< licentie rel="http://creativecommons.org/licenses/by-nc-sa/4.0/">}}
